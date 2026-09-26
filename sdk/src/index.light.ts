@@ -49,3 +49,9 @@ export type {
 } from './network/network.config';
 export type { NetworkConfig as LightNetworkConfig } from './types';
 export * from './types';
+
+/* Errors — the typed error surface (TikkaSdkError, TikkaSdkErrorCode and the
+   typed contract error classes). errors.ts is dependency-free, so this stays
+   inside the light bundle's zero-heavy-deps budget; clients need it to
+   classify SDK failures (user rejection, wallet state, timeouts, …). */
+export * from './utils/errors';
